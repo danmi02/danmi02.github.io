@@ -1,0 +1,30 @@
+#+title: Basic Terminal Commands
+#+description: Some basic terminal commands
+#+setupfile: https://distro.tube/org-html-themes/org/theme-readtheorg.setup
+#+property: header-args :exports both :eval never-export
+#+options: num:nil
+
+* LS
+#+begin_src shell
+ls Playground
+#+end_src
+
+#+RESULTS:
+| file1.txt |
+| file2.txt |
+| file3.txt |
+| file4.txt |
+| file5.txt |
+
+* CD
+#+begin_src shell
+cd Playground
+ls
+#+end_src
+
+#+RESULTS:
+| file1.txt |
+| file2.txt |
+| file3.txt |
+| file4.txt |
+| file5.txt |

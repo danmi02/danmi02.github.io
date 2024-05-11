@@ -1,0 +1,17 @@
+#+title: Personal Site
+#+description: My Personal Site
+#+export_file_name: ./index.html
+#+setupfile: https://distro.tube/org-html-themes/org/theme-readtheorg.setup
+#+property: header-args :exports both :eval never-export
+#+options: num:nil
+
+* Welcome to my Personal Site!
+** [[https://orgmode.org/manual/Publishing.html][Site generated with org-publish]]
+** there's nothing here yet
++ it's a blank page thus far
+* Notes
+** [[file:notes/linux/index.org][Linux]]
+* TODO Things to do [1/3]
++ [X] one item
++ [ ] second item
++ [ ] fix the theme, numbers don't look great
