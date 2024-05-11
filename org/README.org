@@ -1,7 +1,7 @@
 #+title: Personal Site
 #+description: My Personal Site
 #+export_file_name: ./index.html
-#+setupfile: https://distro.tube/org-html-themes/org/theme-readtheorg.setup
+#+setupfile: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 #+property: header-args :exports both :eval never-export
 #+options: num:nil
 

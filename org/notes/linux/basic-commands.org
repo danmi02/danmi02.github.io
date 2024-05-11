@@ -1,6 +1,6 @@
 #+title: Basic Terminal Commands
 #+description: Some basic terminal commands
-#+setupfile: https://distro.tube/org-html-themes/org/theme-readtheorg.setup
+#+setupfile: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 #+property: header-args :exports both :eval never-export
 #+options: num:nil
 
