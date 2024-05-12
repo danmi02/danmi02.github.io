@@ -6,7 +6,7 @@
 #+options: num:nil
 
 * Welcome to my Personal Site!
-This is a static HTML site generated with [[https://orgmode.org/manual/Publishing.html][org-publish]].
+This is a static HTML site generated with [[https://orgmode.org/manual/Publishing.html][org-publish]]. The readtheorg theme is an edited version of [[https://distro.tube/][distro.tube]], which in turn was based off of [[https://github.com/fniessen/org-html-themes][fniessen/org-html-themes]].
 ** there's nothing here yet
 + it's a blank page thus far
 * Notes

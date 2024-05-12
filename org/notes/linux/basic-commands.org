@@ -4,6 +4,7 @@
 #+property: header-args :exports both :eval never-export
 #+options: num:nil
 
+Basic terminal commands.
 * LS
 Print out files in a directory.
 #+begin_src shell
