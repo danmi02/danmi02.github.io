@@ -1,10 +1,11 @@
 #+title: Basic Terminal Commands
 #+description: Some basic terminal commands
-#+setupfile: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+setupfile: https://danmi02.github.io/org-html-themes/org/theme-readtheorg.setup
 #+property: header-args :exports both :eval never-export
 #+options: num:nil
 
 * LS
+Print out files in a directory.
 #+begin_src shell
 ls Playground
 #+end_src
@@ -17,6 +18,7 @@ ls Playground
 | file5.txt |
 
 * CD
+Change into a specified directory.
 #+begin_src shell
 cd Playground
 ls
