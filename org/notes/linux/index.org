@@ -4,7 +4,6 @@
 #+property: header-args :exports both :eval never-export
 #+options: num:nil
 
-* TODO REMOVE ME!
 * [[https://www.youtube.com/playlist?list=PLtK75qxsQaMLZSo7KL-PmiRarU7hrpnwK][Linux Sysadmin Playlist]]
 ** Command Line
 + [[file:basic-commands.org][Basic Commands]]
