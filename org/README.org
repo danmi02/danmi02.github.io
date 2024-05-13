@@ -11,10 +11,11 @@ This is a static HTML site generated with [[https://orgmode.org/manual/Publishin
 + it's a blank page thus far
 * Notes
 Here are some notes I took in org that I exported to HTML.
-+ [[file:notes/linux/index.org][Linux]]
+** [[file:notes/linux/index.org][Linux Operating System]]
 
-* TODO Things to do [1/4]
+* TODO Things to do [1/5]
 + [X] one item
 + [ ] second item
 + [ ] third item???
 + [ ] =Fourth Item.=
++ [ ] ~Fifth Item~
