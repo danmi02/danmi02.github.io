@@ -10,3 +10,5 @@ My notes for the GNU/Linux operating system.
 + [[file:basic-commands.org][Basic Commands]]
 * [[https://www.linuxcommand.org/tlcl.php][The Linux Command Line by William Shotts]]
 ** Command Line
++ [[file:wildcards.org][Wildcards]]
++ [[file:commands.org][Commands]]

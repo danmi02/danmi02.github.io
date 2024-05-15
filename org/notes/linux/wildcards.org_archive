@@ -1,0 +1,25 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/ddmin/Documents/share/website/org/notes/linux/wildcards.org
+
+
+* Examples
+:PROPERTIES:
+:ARCHIVE_TIME: 2024-05-14 Tue 20:57
+:ARCHIVE_FILE: ~/Documents/share/website/org/notes/linux/wildcards.org
+:ARCHIVE_OLPATH: Wildcards (Globbing)
+:ARCHIVE_CATEGORY: wildcards
+:END:
+
+| Pattern                | Matches                                     |
+|------------------------+---------------------------------------------|
+| =*=                      | Matches any file                            |
+| =g*=                     | Begins with ~g~                               |
+| =b*.txt=                 | Begins with ~b~ and ends with ~.txt~            |
+| =Data???=                | Begins with ~Data~ and ends with _3 characters_ |
+| =[abc]*=                 | Begins with ~a, b,~ or ~c~                      |
+| =BACKUP.[0-9][0-9][0-9]= | Begins with ~BACKUP.~ and ends with _3 digits_  |
+| =[[:upper:]]*=           | Begins with an _uppercase letter_             |
+| =[![:digit:]]*=        | *DOESN'T* begin with a digit                    |
+| =*[[:lower:]123]=        | Ends with ~1, 2, 3~ or _lowercase letter_       |

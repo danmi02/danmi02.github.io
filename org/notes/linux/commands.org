@@ -1,0 +1,103 @@
+#+title: Commands
+#+description: Linux commands and commands related to commands.
+#+setupfile: https://danmi02.github.io/org-html-themes/org/theme-readtheorg.setup
+#+property: header-args :exports both :eval never-export
+#+options: num:nil
+
+* Commands
+** Types of Commands
+| Command Type       | Example                    |
+|--------------------+----------------------------|
+| Executable program | /usr/bin/*                 |
+| Shell Builtin      | cd                         |
+| Shell Function     | hello() { echo "Hello!"; } |
+| Alias              | alias ls='ls --color=tty'  |
+* Getting Help for Commands
+** =type= - display the type of command
+#+begin_src bash
+type type
+#+end_src
+
+#+RESULTS:
+: type is a shell builtin
+
+#+begin_src bash
+type cp
+#+end_src
+
+#+RESULTS:
+: cp is /usr/bin/cp
+** =which= - display executable location
+When there are multiple executable of the same name, use =which= to display the executable location.
+
+#+begin_src bash
+which ls
+#+end_src
+
+#+RESULTS:
+: /usr/bin/ls
+** =help= - help for shell builtins
+*** Notation
+=cd [-L|[-P[-e]]] [dir]=
++ vertical bar indicates *mutually exclusive* options
++ either ~-L~ *OR* ~-P~
+  + ~-P~ can be followed by ~-e~
++ optional argument ~dir~
+** =--help= - option supported by most commands
+** =man= - manual page
+** =apropos= - display appropriate commands
+#+begin_src bash
+apropos "text editor"
+#+end_src
+
+#+RESULTS:
+| ed                | (1) | - | line-oriented | text      | editor |              |       |         |
+| ex                | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| gedit             | (1) | - | text          | editor    | for    | the          | GNOME | Desktop |
+| gnome-text-editor | (1) | - | text          | editor    | for    | the          | GNOME | Desktop |
+| gview             | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| gvim              | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| notepad           | (1) | - | Wine          | text      | editor |              |       |         |
+| red               | (1) | - | line-oriented | text      | editor |              |       |         |
+| rgview            | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| rgvim             | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| rview             | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| rvim              | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| vi                | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| view              | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| vim               | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| vimdot            | (1) | - | Combined      | text      | editor | and          | dot   | viewer  |
+| xedit             | (1) | - | simple        | text      | editor | for          | X     |         |
+
+=man= with the ~-k~ flag does the same thing.
+
+#+begin_src bash
+man -k "text editor"
+#+end_src
+
+#+RESULTS:
+| ed                | (1) | - | line-oriented | text      | editor |              |       |         |
+| ex                | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| gedit             | (1) | - | text          | editor    | for    | the          | GNOME | Desktop |
+| gnome-text-editor | (1) | - | text          | editor    | for    | the          | GNOME | Desktop |
+| gview             | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| gvim              | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| notepad           | (1) | - | Wine          | text      | editor |              |       |         |
+| red               | (1) | - | line-oriented | text      | editor |              |       |         |
+| rgview            | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| rgvim             | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| rview             | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| rvim              | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| vi                | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| view              | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| vim               | (1) | - | Vi            | IMproved, | a      | programmer's | text  | editor  |
+| vimdot            | (1) | - | Combined      | text      | editor | and          | dot   | viewer  |
+| xedit             | (1) | - | simple        | text      | editor | for          | X     |         |
+** =whatis= - one-line man page description
+#+begin_src bash
+whatis bash
+#+end_src
+
+#+RESULTS:
+: bash (1)             - GNU Bourne-Again SHell
+** =info= - GNU alternative to =man=

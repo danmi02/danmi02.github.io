@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-05-14 Tue 21:50 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Commands</title>
+<meta name="author" content="Daniel Min" />
+<meta name="description" content="Linux commands and commands related to commands." />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://danmi02.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://danmi02.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://danmi02.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://danmi02.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Commands</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orge353fcb">Commands</a>
+<ul>
+<li><a href="#org915fa44">Types of Commands</a></li>
+</ul>
+</li>
+<li><a href="#org5c2cb3d">Getting Help for Commands</a>
+<ul>
+<li><a href="#orgf9a2c95"><code>type</code> - display the type of command</a></li>
+<li><a href="#org0816b01"><code>which</code> - display executable location</a></li>
+<li><a href="#org0d608e5"><code>help</code> - help for shell builtins</a>
+<ul>
+<li><a href="#orgaf27777">Notation</a></li>
+</ul>
+</li>
+<li><a href="#orgb8ee989"><code>--help</code> - option supported by most commands</a></li>
+<li><a href="#orgd6709e9"><code>man</code> - manual page</a></li>
+<li><a href="#orgabf1e1d"><code>apropos</code> - display appropriate commands</a></li>
+<li><a href="#org5d6c801"><code>whatis</code> - one-line man page description</a></li>
+<li><a href="#org6e3e1a3"><code>info</code> - GNU alternative to <code>man</code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge353fcb" class="outline-2">
+<h2 id="orge353fcb">Commands</h2>
+<div class="outline-text-2" id="text-orge353fcb">
+</div>
+<div id="outline-container-org915fa44" class="outline-3">
+<h3 id="org915fa44">Types of Commands</h3>
+<div class="outline-text-3" id="text-org915fa44">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command Type</th>
+<th scope="col" class="org-left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Executable program</td>
+<td class="org-left">/usr/bin/*</td>
+</tr>
+
+<tr>
+<td class="org-left">Shell Builtin</td>
+<td class="org-left">cd</td>
+</tr>
+
+<tr>
+<td class="org-left">Shell Function</td>
+<td class="org-left">hello() { echo &ldquo;Hello!&rdquo;; }</td>
+</tr>
+
+<tr>
+<td class="org-left">Alias</td>
+<td class="org-left">alias ls=&rsquo;ls &#x2013;color=tty&rsquo;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-org5c2cb3d" class="outline-2">
+<h2 id="org5c2cb3d">Getting Help for Commands</h2>
+<div class="outline-text-2" id="text-org5c2cb3d">
+</div>
+<div id="outline-container-orgf9a2c95" class="outline-3">
+<h3 id="orgf9a2c95"><code>type</code> - display the type of command</h3>
+<div class="outline-text-3" id="text-orgf9a2c95">
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #FF6188;">type </span><span style="color: #78DCE8;">type</span>
+</pre>
+</div>
+
+<pre class="example">
+type is a shell builtin
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #78DCE8;">type</span> <span style="color: #78DCE8;">cp</span>
+</pre>
+</div>
+
+<pre class="example">
+cp is /usr/bin/cp
+</pre>
+</div>
+</div>
+<div id="outline-container-org0816b01" class="outline-3">
+<h3 id="org0816b01"><code>which</code> - display executable location</h3>
+<div class="outline-text-3" id="text-org0816b01">
+<p>
+When there are multiple executable of the same name, use <code>which</code> to display the executable location.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">which <span style="color: #78DCE8;">ls</span>
+</pre>
+</div>
+
+<pre class="example">
+/usr/bin/ls
+</pre>
+</div>
+</div>
+<div id="outline-container-org0d608e5" class="outline-3">
+<h3 id="org0d608e5"><code>help</code> - help for shell builtins</h3>
+<div class="outline-text-3" id="text-org0d608e5">
+</div>
+<div id="outline-container-orgaf27777" class="outline-4">
+<h4 id="orgaf27777">Notation</h4>
+<div class="outline-text-4" id="text-orgaf27777">
+<p>
+<code>cd [-L|[-P[-e]]] [dir]</code>
+</p>
+<ul class="org-ul">
+<li>vertical bar indicates <b>mutually exclusive</b> options</li>
+<li>either <code>-L</code> <b>OR</b> <code>-P</code>
+<ul class="org-ul">
+<li><code>-P</code> can be followed by <code>-e</code></li>
+</ul></li>
+<li>optional argument <code>dir</code></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb8ee989" class="outline-3">
+<h3 id="orgb8ee989"><code>--help</code> - option supported by most commands</h3>
+</div>
+<div id="outline-container-orgd6709e9" class="outline-3">
+<h3 id="orgd6709e9"><code>man</code> - manual page</h3>
+</div>
+<div id="outline-container-orgabf1e1d" class="outline-3">
+<h3 id="orgabf1e1d"><code>apropos</code> - display appropriate commands</h3>
+<div class="outline-text-3" id="text-orgabf1e1d">
+<div class="org-src-container">
+<pre class="src src-bash">apropos <span style="color: #FFD866;">"text editor"</span>
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">ed</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">line-oriented</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">ex</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">gedit</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+<td class="org-left">for</td>
+<td class="org-left">the</td>
+<td class="org-left">GNOME</td>
+<td class="org-left">Desktop</td>
+</tr>
+
+<tr>
+<td class="org-left">gnome-text-editor</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+<td class="org-left">for</td>
+<td class="org-left">the</td>
+<td class="org-left">GNOME</td>
+<td class="org-left">Desktop</td>
+</tr>
+
+<tr>
+<td class="org-left">gview</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">gvim</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">notepad</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Wine</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">red</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">line-oriented</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">rgview</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">rgvim</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">rview</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">rvim</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">vi</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">view</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">vim</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">vimdot</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Combined</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+<td class="org-left">and</td>
+<td class="org-left">dot</td>
+<td class="org-left">viewer</td>
+</tr>
+
+<tr>
+<td class="org-left">xedit</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">simple</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+<td class="org-left">for</td>
+<td class="org-left">X</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<code>man</code> with the <code>-k</code> flag does the same thing.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">man -k <span style="color: #FFD866;">"text editor"</span>
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">ed</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">line-oriented</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">ex</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">gedit</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+<td class="org-left">for</td>
+<td class="org-left">the</td>
+<td class="org-left">GNOME</td>
+<td class="org-left">Desktop</td>
+</tr>
+
+<tr>
+<td class="org-left">gnome-text-editor</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+<td class="org-left">for</td>
+<td class="org-left">the</td>
+<td class="org-left">GNOME</td>
+<td class="org-left">Desktop</td>
+</tr>
+
+<tr>
+<td class="org-left">gview</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">gvim</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">notepad</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Wine</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">red</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">line-oriented</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">rgview</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">rgvim</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">rview</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">rvim</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">vi</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">view</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">vim</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Vi</td>
+<td class="org-left">IMproved,</td>
+<td class="org-left">a</td>
+<td class="org-left">programmer&rsquo;s</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+</tr>
+
+<tr>
+<td class="org-left">vimdot</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">Combined</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+<td class="org-left">and</td>
+<td class="org-left">dot</td>
+<td class="org-left">viewer</td>
+</tr>
+
+<tr>
+<td class="org-left">xedit</td>
+<td class="org-left">(1)</td>
+<td class="org-left">-</td>
+<td class="org-left">simple</td>
+<td class="org-left">text</td>
+<td class="org-left">editor</td>
+<td class="org-left">for</td>
+<td class="org-left">X</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org5d6c801" class="outline-3">
+<h3 id="org5d6c801"><code>whatis</code> - one-line man page description</h3>
+<div class="outline-text-3" id="text-org5d6c801">
+<div class="org-src-container">
+<pre class="src src-bash">whatis bash
+</pre>
+</div>
+
+<pre class="example">
+bash (1)             - GNU Bourne-Again SHell
+</pre>
+</div>
+</div>
+<div id="outline-container-org6e3e1a3" class="outline-3">
+<h3 id="org6e3e1a3"><code>info</code> - GNU alternative to <code>man</code></h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Daniel Min</p>
+<p class="date">Created: 2024-05-14 Tue 21:50</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+#+title: Wildcards
+#+description: Linux globbing and wildcards
+#+setupfile: https://danmi02.github.io/org-html-themes/org/theme-readtheorg.setup
+#+property: header-args :exports both :eval never-export
+#+options: num:nil
+
+* Wildcards (Globbing)
+
+| Wildcard     | Meaning                                                           |
+|--------------+-------------------------------------------------------------------|
+| =*=            | Match any character                                               |
+| =?=            | Match a single character                                          |
+| =[characters]= | Matches any specified characters                                  |
+| =[!character]= | Matches any character that *DOESN'T* match the specified characters |
+| =[[:alnum:]]=  | Matches any alphanumeric character                                |
+| =[[:alpha:]]=  | Matches any alphabetic character                                  |
+| =[[:digit:]]=  | Matches any digit                                                 |
+| =[[:lower:]]=  | Matches any lowercase letter                                      |
+| =[[:upper:]]=  | Matches any uppercase letter                                      |
+
+** Examples
+
+| Pattern                | Matches                                     |
+|------------------------+---------------------------------------------|
+| =*=                      | Matches any file                            |
+| =g*=                     | Begins with ~g~                               |
+| =b*.txt=                 | Begins with ~b~ and ends with ~.txt~            |
+| =Data???=                | Begins with ~Data~ and ends with _3 characters_ |
+| =[abc]*=                 | Begins with ~a, b,~ or ~c~                      |
+| =BACKUP.[0-9][0-9][0-9]= | Begins with ~BACKUP.~ and ends with _3 digits_  |
+| =[[:upper:]]*=           | Begins with an _uppercase letter_             |
+| =[![:digit:]]*=        | *DOESN'T* begin with a digit                    |
+| =*[[:lower:]123]=        | Ends with ~1, 2, 3~ or _lowercase letter_       |
