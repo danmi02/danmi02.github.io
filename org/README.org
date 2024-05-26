@@ -6,8 +6,8 @@
 #+options: num:nil
 
 * Welcome to my Personal Site!
-This is a static HTML site generated with [[https://orgmode.org/manual/Publishing.html][org-publish]]. The readtheorg theme is an edited version of [[https://distro.tube/][distro.tube]], which in turn was based off of [[https://github.com/fniessen/org-html-themes][fniessen/org-html-themes]].
-** there's nothing here yet
+This is a static HTML site generated with [[https://orgmode.org/manual/Publishing.html][org-publish]]. The /readtheorg/ theme is an edited version of [[https://distro.tube/][distro.tube]], which in turn was based off of [[https://github.com/fniessen/org-html-themes][fniessen/org-html-themes]].
+** There's nothing here yet
 + it's a blank page thus far
 * Notes
 Here are some notes I took in org that I exported to HTML.
@@ -20,6 +20,8 @@ Here are some notes I took in org that I exported to HTML.
 + [ ] =Fourth Item.=
 + [ ] ~Fifth Item~
 
-#begin_example
+ #+begin_example
 This is an example.
-#end_example
+There is some text in here.
+This is the last line.
+ #+end_example

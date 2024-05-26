@@ -1,5 +1,5 @@
 #+title: Basic Terminal Commands
-#+description: Some basic terminal commands
+#+description: Some basic terminal commands.
 #+setupfile: https://danmi02.github.io/org-html-themes/org/theme-readtheorg.setup
 #+property: header-args :exports both :eval never-export
 #+options: num:nil
