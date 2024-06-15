@@ -6,29 +6,30 @@
 
 * [[https://github.com/mdn/beginner-html-site][HyperText Markup Language (HTML) Basics]]
 ** Comment
-#+begin_example html
+#+begin_src html
 <!-- This is an HTML comment. -->
-#+end_example
+#+end_src
 
 ** Viewport Element
-#+begin_example html
+#+begin_src html
 <meta name="viewport" content="width=device-width">
-#+end_example
+#+end_src
 
 Sets the page to render at width of viewport. Ensures that web pages display properly on mobile devices.
 
 ** Anchors (a)
 Link to different pages using the =a= (anchor) tag.
 
-#+begin_example html
+
+#+begin_src html
 <a>Link</a>
-#+end_example
+#+end_src
 
 *** Hypertext Reference (href)
 Specify destination of =a= using the =href= attribute.
 
-#+begin_example html
+#+begin_src html
 <a href="https://website.com">
     Link
 </a>
-#+end_example
+#+end_src
