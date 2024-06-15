@@ -1,0 +1,9 @@
+#+title: Web Development
+#+description: Web Development notes
+#+setupfile: https://danmi02.github.io/org-html-themes/org/theme-readtheorg.setup
+#+property: header-args :exports both :eval never-export
+#+options: num:nil tex:t
+
+* [[https://developer.mozilla.org/en-US/][Mozilla Developer Network Web Docs]]
+** [[file:html.org][HTML]]
+** [[file:css.org][CSS]]

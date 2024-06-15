@@ -1,0 +1,34 @@
+#+title: HTML
+#+description: Web Development Notes (HTML)
+#+setupfile: https://danmi02.github.io/org-html-themes/org/theme-readtheorg.setup
+#+property: header-args :exports both :eval never-export
+#+options: num:nil tex:t
+
+* [[https://github.com/mdn/beginner-html-site][HyperText Markup Language (HTML) Basics]]
+** Comment
+#+begin_example html
+<!-- This is an HTML comment. -->
+#+end_example
+
+** Viewport Element
+#+begin_example html
+<meta name="viewport" content="width=device-width">
+#+end_example
+
+Sets the page to render at width of viewport. Ensures that web pages display properly on mobile devices.
+
+** Anchors (a)
+Link to different pages using the =a= (anchor) tag.
+
+#+begin_example html
+<a>Link</a>
+#+end_example
+
+*** Hypertext Reference (href)
+Specify destination of =a= using the =href= attribute.
+
+#+begin_example html
+<a href="https://website.com">
+    Link
+</a>
+#+end_example

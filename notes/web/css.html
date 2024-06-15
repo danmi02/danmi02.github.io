@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-06-15 Sat 11:53 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CSS</title>
+<meta name="author" content="Daniel Min" />
+<meta name="description" content="Web Development Notes (CSS)" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://danmi02.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://danmi02.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://danmi02.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://danmi02.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">CSS</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgdc3290a">Cascading Style Sheets (CSS) Basics</a>
+<ul>
+<li><a href="#orga1574ac">Comment</a></li>
+<li><a href="#org851cb3a">Anatomy of a CSS ruleset</a></li>
+<li><a href="#org19d8e70">Selecting Multiple Items</a></li>
+<li><a href="#orgdfb152c">Selector Types</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdc3290a" class="outline-2">
+<h2 id="orgdc3290a">Cascading Style Sheets (CSS) Basics</h2>
+<div class="outline-text-2" id="text-orgdc3290a">
+<p>
+CSS is a <span class="underline">style sheet language</span> used to selectively style HTML elements.
+</p>
+</div>
+<div id="outline-container-orga1574ac" class="outline-3">
+<h3 id="orga1574ac">Comment</h3>
+<div class="outline-text-3" id="text-orga1574ac">
+<pre class="example" id="org92f7f54">
+/*
+    This is a CSS comment.
+*/
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org851cb3a" class="outline-3">
+<h3 id="org851cb3a">Anatomy of a CSS ruleset</h3>
+<div class="outline-text-3" id="text-org851cb3a">
+
+<div id="org4e260e5" class="figure">
+<p><img src="assets/css-anatomy.png" alt="css-anatomy.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Anatomy of CSS (source: <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">mdn web docs</a>)</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org19d8e70" class="outline-3">
+<h3 id="org19d8e70">Selecting Multiple Items</h3>
+<div class="outline-text-3" id="text-org19d8e70">
+<pre class="example" id="orgce2347b">
+p,
+li,
+hi {
+    color: red;
+    width: 500px;
+    border: 1px solid black;
+}
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgdfb152c" class="outline-3">
+<h3 id="orgdfb152c">Selector Types</h3>
+<div class="outline-text-3" id="text-orgdfb152c">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Selector Name</th>
+<th scope="col" class="org-left">Selection</th>
+<th scope="col" class="org-left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Element Selector</td>
+<td class="org-left">All HTML elements of type</td>
+<td class="org-left">p → &lt;p&gt;</td>
+</tr>
+
+<tr>
+<td class="org-left">ID Selector</td>
+<td class="org-left">Specific Unique ID</td>
+<td class="org-left">#my-id → &lt;p id=&ldquo;my-id&rdquo;</td>
+</tr>
+
+<tr>
+<td class="org-left">Class Selector</td>
+<td class="org-left">Specific Class</td>
+<td class="org-left">.my-class → &lt;p class=&ldquo;my-class&rdquo;&gt;, &lt;a &ldquo;my-class&rdquo;&gt;</td>
+</tr>
+
+<tr>
+<td class="org-left">Attribute Selector</td>
+<td class="org-left">Element w/ Attribute</td>
+<td class="org-left">img[src] → &lt;img src=&ldquo;image.png&rdquo;&gt;</td>
+</tr>
+
+<tr>
+<td class="org-left">Pseudo-Class Selector</td>
+<td class="org-left">Element in Specified State</td>
+<td class="org-left">a:hover → &lt;a&gt; (mouse hovering)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Daniel Min</p>
+<p class="date">Created: 2024-06-15 Sat 11:53</p>
+</div>
+</body>
+</html>

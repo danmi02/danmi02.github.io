@@ -1,0 +1,38 @@
+#+title: CSS
+#+description: Web Development Notes (CSS)
+#+setupfile: https://danmi02.github.io/org-html-themes/org/theme-readtheorg.setup
+#+property: header-args :exports both :eval never-export
+#+options: num:nil tex:t
+
+* Cascading Style Sheets (CSS) Basics
+CSS is a _style sheet language_ used to selectively style HTML elements.
+** Comment
+#+begin_example css
+/*
+    This is a CSS comment.
+*/
+#+end_example
+
+** Anatomy of a CSS ruleset
+#+caption: Anatomy of CSS (source: [[https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics][mdn web docs]])
+[[file:assets/css-anatomy.png]]
+
+** Selecting Multiple Items
+#+begin_example css
+p,
+li,
+hi {
+    color: red;
+    width: 500px;
+    border: 1px solid black;
+}
+#+end_example
+
+** Selector Types
+| Selector Name         | Selection                  | Example                                          |
+|-----------------------+----------------------------+--------------------------------------------------|
+| Element Selector      | All HTML elements of type  | p → <p>                                          |
+| ID Selector           | Specific Unique ID         | #my-id → <p id="my-id"                           |
+| Class Selector        | Specific Class             | .my-class → <p class="my-class">, <a "my-class"> |
+| Attribute Selector    | Element w/ Attribute       | img[src] → <img src="image.png">                 |
+| Pseudo-Class Selector | Element in Specified State | a:hover → <a> (mouse hovering)                   |
